@@ -1,0 +1,27 @@
+{
+  "name": "unid",
+  "description": "Uniquely unique IDs",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/chapel/unid.git"
+  },
+  "homepage": "https://github.com/chapel/unid",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "dependencies": {
+    "random-mac": "0.0.4",
+    "shelljs": "~0.1.3",
+    "netif": "~0.1.6"
+  },
+  "devDependencies": {
+    "mocha": "~1.7.4"
+  },
+  "author": {
+    "name": "Jacob Chapel",
+    "email": "jacob.chapel@gmail.com"
+  },
+  "license": "MIT"
+}
