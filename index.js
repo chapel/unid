@@ -137,11 +137,11 @@ function con(opts) {
     var bin
     
     if (section === 'timestamp') {
-      bin = this._id.readDoubleBE(0, 8)
+      bin = this._id.readDoubleBE(def.time.s, def.time.e)
     }
 
     if (section === 'sequence') {
-      bin = this._id.readInt16BE(8)
+      bin = this._id.readInt16BE(def.seq.s)
     }
 
     return bin
@@ -162,7 +162,7 @@ function con(opts) {
     if (section === 'mac') {
       var tmp = ''
       for (var i = 0; i < 6; i+=1) {
-        tmp = this._id.readUInt8(10 + i).toString(16)
+        tmp = this._id.readUInt8(def.mac.s + i).toString(16)
         if (tmp.length < 4) tmp = padLeft(tmp, 2)
         hex += tmp
       }
